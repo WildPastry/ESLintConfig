@@ -3,7 +3,6 @@
  * DONE - CUSTOMISED = Accepted rule but changed default behaviour
  * DONE - OFF = Disabled rule
  */
-
 {
   "root": true,
 
@@ -73,7 +72,7 @@
         "camelcase": 1, //enforce camelcase naming convention // DONE
         "capitalized-comments": 1, //enforce or disallow capitalization of the first letter of a comment // DONE
         "class-methods-use-this": 0, //enforce that class methods utilize `this` // DONE
-        "complexity": 1, //enforce a maximum cyclomatic complexity allowed in a program // DONE
+        "complexity": 0, //enforce a maximum cyclomatic complexity allowed in a program // DONE - OFF
         "consistent-return": 1, //require `return` statements to either always or never specify values // DONE
         "consistent-this": 1, //enforce consistent naming when capturing the current execution context // DONE
         "curly": 1, //enforce consistent brace style for all control statements // DONE
@@ -207,12 +206,12 @@
         "sort-keys": 0, //require object keys to be sorted // DONE
         "sort-vars": 1, //require variables within the same declaration block to be sorted // DONE
         "spaced-comment": 1, //enforce consistent spacing after the `//` or `/*` in a comment // DONE
-        "strict": 1, //require or disallow strict mode directives // DONE
+        "strict": 0, //require or disallow strict mode directives // DONE - OFF
         "symbol-description": 1, //require symbol descriptions // DONE
         "vars-on-top": 1, //require `var` declarations be placed at the top of their containing scope // DONE
         "yoda": 1, //require or disallow "Yoda" conditions // DONE
 
-        // Layout & Formatting: https://eslint.org/docs/rules/
+        // Layout & formatting
         "array-bracket-newline": 1, // enforce linebreaks after opening and before closing array brackets // DONE
         "array-bracket-spacing": 1, // enforce consistent spacing inside array brackets // DONE
         "array-element-newline": 0, // enforce line breaks after each array element // DONE - OFF
@@ -233,16 +232,13 @@
         "implicit-arrow-linebreak": 1, // enforce the location of arrow function bodies // DONE
         "indent": [1, 2], // enforce consistent indentation. second value is number of spaces // DONE
         "jsx-quotes": 1, // enforce the consistent use of either double or single quotes in JSX attributes // DONE
-        "key-spacing": 1, // enforce consistent spacing between keys and values in object literal properties // DONE
+        "key-spacing": [1, {"beforeColon": false, "afterColon": true}], // enforce consistent spacing between keys and values in object literal properties // DONE - CUSTOMISED
         "keyword-spacing": 1, // enforce consistent spacing before and after keywords // DONE
         "line-comment-position": 1, // enforce position of line comments // DONE
         "linebreak-style": 0, // enforce consistent linebreak style // OFF
         "lines-around-comment": 1, // require empty lines around comments // DONE
         "lines-between-class-members": 0, // require or disallow an empty line between class members // DONE
-        "max-len": [
-          1,
-          { "code": 140, "ignoreUrls": true, "ignorePattern": "^import .*" }
-        ], // enforce a maximum line length // DONE - CUSTOMISED
+        "max-len": [1, { "code": 140, "ignoreUrls": true, "ignorePattern": "^import .*" }], // enforce a maximum line length // DONE - CUSTOMISED
         "max-statements-per-line": 1, // enforce a maximum number of statements allowed per line // DONE
         "multiline-ternary": 0, // enforce newlines between operands of ternary expressions // DONE - OFF
         "new-parens": 1, // enforce or disallow parentheses when invoking a constructor with no arguments // DONE
@@ -279,8 +275,7 @@
         "wrap-regex": 1, // require parenthesis around regex literals // DONE
         "yield-star-spacing": 1, // require or disallow spacing around the `*` in `yield*` expressions // DONE
 
-        // React specific linting rules for ESLint
-        //
+        // React specific
         "react/display-name": 0, // Prevent missing displayName in a React component definition
         "react/jsx-quotes": [1, "double", "avoid-escape"], // Enforce quote style for JSX attributes
         "react/jsx-no-undef": 1, // Disallow undeclared variables in JSX
