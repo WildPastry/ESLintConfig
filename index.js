@@ -1,13 +1,11 @@
 module.exports = {
+  // Testing a comment
   globals: {
     MyGlobal: true,
   },
-
+  // Rules
   rules: {
     semi: [2, 'always'],
-  },
-
-  printMsg: function () {
-    console.log('This is a message from the demo package');
-  },
+    quotes: ['warn', 'single']
+  }
 };
