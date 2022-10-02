@@ -1,53 +1,59 @@
 module.exports = {
-  // Globals
-  globals: {
-    "root": true,
+/* KEY:
+ * DONE = Checked and accepted rule
+ * DONE - CUSTOMISED = Accepted rule but changed default behaviour
+ * DONE - OFF = Disabled rule
+ */
+  "root": true,
 
-    "ignorePatterns": ["cypress/*"],
-  
-    "extends": [
-      "eslint:recommended",
-      "plugin:@typescript-eslint/recommended",
-      "plugin:@typescript-eslint/recommended-requiring-type-checking"
-    ],
-  
-    "env": {
-      "browser": true,
-      "node": true,
-      "es6": true
-    },
-  
-    "plugins": ["react"],
-  
-    "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
-  
-    "ecmaFeatures": {
-      "arrowFunctions": true,
-      "binaryLiterals": true,
-      "blockBindings": true,
-      "classes": true,
-      "defaultParams": true,
-      "destructuring": true,
-      "forOf": true,
-      "generators": true,
-      "modules": true,
-      "objectLiteralComputedProperties": true,
-      "objectLiteralDuplicateProperties": true,
-      "objectLiteralShorthandMethods": true,
-      "objectLiteralShorthandProperties": true,
-      "octalLiterals": true,
-      "regexUFlag": true,
-      "regexYFlag": true,
-      "spread": true,
-      "superInFunctions": true,
-      "templateStrings": true,
-      "unicodeCodePointEscapes": true,
-      "globalReturn": true,
-      "jsx": true
+  "ignorePatterns": ["cypress/*"],
+
+  "overrides": [
+    {
+      "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:@typescript-eslint/recommended-requiring-type-checking"
+      ],
+
+      "env": {
+        "browser": true,
+        "node": true,
+        "es6": true
+      },
+
+      "plugins": ["react"],
+
+      "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
+
+      "ecmaFeatures": {
+        "arrowFunctions": true,
+        "binaryLiterals": true,
+        "blockBindings": true,
+        "classes": true,
+        "defaultParams": true,
+        "destructuring": true,
+        "forOf": true,
+        "generators": true,
+        "modules": true,
+        "objectLiteralComputedProperties": true,
+        "objectLiteralDuplicateProperties": true,
+        "objectLiteralShorthandMethods": true,
+        "objectLiteralShorthandProperties": true,
+        "octalLiterals": true,
+        "regexUFlag": true,
+        "regexYFlag": true,
+        "spread": true,
+        "superInFunctions": true,
+        "templateStrings": true,
+        "unicodeCodePointEscapes": true,
+        "globalReturn": true,
+        "jsx": true
+      }
     }
-  },
-  // Rules
-  rules: {
+  ],
+
+  "rules": {
     "no-inferrable-types": 0, // disallow explicit type declarations for variables or parameters initialized to a number, string, or boolean // DONE - OFF
     "no-unsafe-assignment": 0, // disallow assigning a value with type any to variables and properties // DONE - OFF
     "no-unsafe-member-access": 0, //disallow member access on a value with type any // DONE - OFF
@@ -232,10 +238,7 @@ module.exports = {
     "linebreak-style": 0, // enforce consistent linebreak style // OFF
     "lines-around-comment": 1, // require empty lines around comments // DONE
     "lines-between-class-members": 0, // require or disallow an empty line between class members // DONE
-    "max-len": [
-      1,
-      { "code": 140, "ignoreUrls": true, "ignorePattern": "^import .*" }
-    ], // enforce a maximum line length // DONE - CUSTOMISED
+    "max-len": [1, { "code": 140, "ignoreUrls": true, "ignorePattern": "^import .*" }], // enforce a maximum line length // DONE - CUSTOMISED
     "max-statements-per-line": 1, // enforce a maximum number of statements allowed per line // DONE
     "multiline-ternary": 0, // enforce newlines between operands of ternary expressions // DONE - OFF
     "new-parens": 1, // enforce or disallow parentheses when invoking a constructor with no arguments // DONE
@@ -301,7 +304,7 @@ module.exports = {
     "space-in-brackets": [1, "never"], // require or disallow spaces inside brackets // DONE
     "space-return-throw-case": [1, "always"], // require a space after return, throw, and case // DONE
     "spaced-line-comment": [1, "always"], // require or disallow a space immediately following the // in a line comment // DONE
-
+    
     // React specific
     "react/display-name": 0, // prevent missing displayName in a React component definition // DONE - OFF
     "react/jsx-quotes": [1, "double", "avoid-escape"], // Enforce quote style for JSX attributes // DONE
