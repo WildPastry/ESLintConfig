@@ -111,7 +111,7 @@
         "no-div-regex": 1, // disallow division operators explicitly at the beginning of regular expressions // DONE
         "no-else-return": 1, // disallow `else` blocks after `return` statements in `if` statements // DONE
         "no-empty": 1, // disallow empty block statements // DONE
-        "no-empty-function": ["error", { "allow": ["constructors"] }], // disallow empty functions // DONE - CUSTOMISED
+        "no-empty-function": [1, { "allow": ["constructors"] }], // disallow empty functions // DONE - CUSTOMISED
         "no-eq-null": 1, // disallow `null` comparisons without type-checking operators // DONE
         "no-eval": 1, // disallow the use of `eval()` // DONE
         "no-extend-native": 1, // disallow extending native types // DONE
@@ -178,7 +178,7 @@
         "no-useless-rename": 1, // disallow renaming import, export, and destructured assignments to the same name // DONE
         "no-useless-return": 1, // disallow redundant return statements // DONE
         "no-var": 1, // require `let` or `const` instead of `var` // DONE
-        "no-void": ["error", { "allowAsStatement": true }], // disallow `void` operators // DONE - CUSTOMISED
+        "no-void": [1, { "allowAsStatement": true }], // disallow `void` operators // DONE - CUSTOMISED
         "no-warning-comments": 1, // disallow specified warning terms in comments // DONE
         "no-with": 1, // disallow `with` statements // DONE
         "object-shorthand": 0, // require or disallow method and property shorthand syntax for object literals // DONE

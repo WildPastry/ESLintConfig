@@ -1,6 +1,6 @@
 # ESLintConfig
 
-Shareable ESLint configuration settings
+Shareable ESLint configuration settings. No errors, only warnings.
 
 ## Prerequisites
 
