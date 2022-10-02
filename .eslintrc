@@ -317,7 +317,7 @@
         "react/prop-types": 1, // prevent missing props validation in a React component definition // DONE
         "react/react-in-jsx-scope": 1, // prevent missing React when using JSX // DONE
         "react/self-closing-comp": 1, // prevent extra closing tags for components without children // DONE
-        "react/wrap-multilines": 1, // prevent missing parentheses around multilines JSX // DONE
+        "react/wrap-multilines": 1 // prevent missing parentheses around multilines JSX // DONE
       }
     }
   ]
