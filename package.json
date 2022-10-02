@@ -1,10 +1,10 @@
 {
   "name": "@wildpastry/eslint-config",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "ESLint configuration file",
   "main": "index.js",
   "scripts": {
-    "publish": "npm publish --access public"
+    "deploy": "npm publish --access public"
   },
   "repository": {
     "type": "git",
