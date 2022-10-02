@@ -260,7 +260,7 @@
         "padding-line-between-statements": 1, // require or disallow padding lines between statements // DONE
         "quotes": [1, "single"], // enforce the consistent use of either backticks, double, or single quotes // DONE
         "rest-spread-spacing": 1, // enforce spacing between rest and spread operators and their expressions // DONE
-        "semi": 1, // require or disallow semicolons instead of ASI // DONE
+        "semi": [1, "always"], // require or disallow semicolons instead of ASI // DONE
         "semi-spacing": 1, // enforce consistent spacing before and after semicolons // DONE
         "semi-style": 1, // enforce location of semicolons // DONE
         "space-before-blocks": 1, // enforce consistent spacing before blocks // DONE
