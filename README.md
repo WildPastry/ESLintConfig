@@ -9,23 +9,33 @@ Shareable ESLint configuration settings. No errors, only warnings.
 
 ## Installation and usage
 
-### Step One
+### Install eslint and plugins
 
 ```
-terminal > cd > project root
+npm(or yarn) i eslint@latest
+npm(or yarn) i @typescript-eslint/eslint-plugin
+npm(or yarn) i eslint-plugin-react
 ```
-### Step Two
+### Install eslint config
 
 ```
 npm(or yarn) i @wildpastry/eslint-config@latest
 ```
-### Step Three
+### Create .eslintrc
 
 ```
-create new .eslintrc file (or modify existing)
+create new .eslintrc file
 ```
-### Step Four
+### Add config to .eslintrc
 
 ```
 add { "extends": "@wildpastry/eslint-config" }
+```
+### Add scripts to package.json
+
+```
+"scripts": {
+  "lint": "eslint \"**/*.{js,jsx,ts,tsx}\"",
+  "lint:fix": "eslint --fix \"**/*.{js,jsx,ts,tsx}\""
+}
 ```
