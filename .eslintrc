@@ -229,9 +229,9 @@
         "generator-star-spacing": 1, // enforce consistent spacing around `*` operators in generator functions // DONE
         "implicit-arrow-linebreak": 1, // enforce the location of arrow function bodies // DONE
         "indent": [1, 2], // enforce consistent indentation. second value is number of spaces // DONE
-        "jsx-quotes": 1, // enforce the consistent use of either double or single quotes in JSX attributes // DONE
-        "key-spacing": 1, // enforce consistent spacing between keys and values in object literal properties // DONE
-        "keyword-spacing": 1, // enforce consistent spacing before and after keywords // DONE
+        "jsx-quotes": [1, "prefer-single"], // enforce the consistent use of either double or single quotes in JSX attributes // DONE
+        "key-spacing": [1, { "beforeColon": false }], // enforce consistent spacing between keys and values in object literal properties // DONE
+        "keyword-spacing": [1, { "before": true }], // enforce consistent spacing before and after keywords // DONE
         "line-comment-position": 1, // enforce position of line comments // DONE
         "linebreak-style": 0, // enforce consistent linebreak style // OFF
         "lines-around-comment": 1, // require empty lines around comments // DONE
@@ -303,12 +303,9 @@
         "no-wrap-func": 1, // disallow wrapping of non-IIFE statements in parens // DONE
         "space-after-keywords": [1, "always"], // require a space after certain keywords // DONE
         "space-in-brackets": [1, "never"], // require or disallow spaces inside brackets // DONE
-        "space-return-throw-case": [1, "always"], // require a space after return, throw, and case // DONE
-        "spaced-line-comment": [1, "always"], // require or disallow a space immediately following the // in a line comment // DONE
 
         // React specific
         "react/display-name": 0, // prevent missing displayName in a React component definition // DONE - OFF
-        "react/jsx-quotes": [1, "double", "avoid-escape"], // Enforce quote style for JSX attributes // DONE
         "react/jsx-no-undef": 1, // disallow undeclared variables in JSX // DONE
         "react/jsx-sort-props": 0, // enforce props alphabetical sorting // DONE - OFF
         "react/jsx-uses-react": 1, // prevent React to be incorrectly marked as unused // DONE
@@ -319,8 +316,7 @@
         "react/no-unknown-property": 1, // prevent usage of unknown DOM property // DONE
         "react/prop-types": 1, // prevent missing props validation in a React component definition // DONE
         "react/react-in-jsx-scope": 1, // prevent missing React when using JSX // DONE
-        "react/self-closing-comp": 1, // prevent extra closing tags for components without children // DONE
-        "react/wrap-multilines": 1 // prevent missing parentheses around multilines JSX // DONE
+        "react/self-closing-comp": 1 // prevent extra closing tags for components without children // DONE
       }
     }
   ]
