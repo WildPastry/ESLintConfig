@@ -9,14 +9,14 @@ Shareable ESLint configuration settings. No errors, only warnings.
 
 ### Install eslint and plugins
 ```
-npm(or yarn) i eslint@latest
-npm(or yarn) i @typescript-eslint/eslint-plugin
-npm(or yarn) i eslint-plugin-react
+npm i eslint@latest
+npm i @typescript-eslint/eslint-plugin
+npm i eslint-plugin-react
 ```
 
 ### Install eslint config
 ```
-npm(or yarn) i @wildpastry/eslint-config@latest
+npm i @wildpastry/eslint-config@latest
 ```
 
 ### Create .eslintrc
