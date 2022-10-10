@@ -8,9 +8,7 @@ Shareable ESLint configuration settings. No errors, only warnings.
 
 ### Install eslint and plugins
 ```
-npm i eslint@latest
-npm i @typescript-eslint/eslint-plugin
-npm i eslint-plugin-react
+npm i eslint@latest @typescript-eslint/eslint-plugin@latest eslint-plugin-react@latest
 ```
 
 ### Install eslint config
@@ -25,7 +23,7 @@ create new .eslintrc file
 
 ### Add config to .eslintrc
 ```
-add { "extends": "@wildpastry/eslint-config" }
+add { "extends": "@wildpastry/eslint-config" } into .eslintrc and save
 ```
 
 ### Add scripts to package.json
