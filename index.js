@@ -57,7 +57,7 @@ module.exports = {
     "block-scoped-var": 1, // enforce the use of variables within the scope they are defined // DONE
     "camelcase": 1, // enforce camelcase naming convention // DONE
     "capitalized-comments": 1, // enforce or disallow capitalization of the first letter of a comment // DONE
-    "class-methods-use-this": 0, // enforce that class methods utilize `this` // DONE
+    "class-methods-use-this": 0, // enforce that class methods utilize `this` // DONE - OFF
     "complexity": 0, // enforce a maximum cyclomatic complexity allowed in a program // DONE - OFF
     "consistent-return": 1, // require `return` statements to either always or never specify values // DONE
     "consistent-this": 1, // enforce consistent naming when capturing the current execution context // DONE
@@ -118,7 +118,7 @@ module.exports = {
     "no-lone-blocks": 1, // disallow unnecessary nested blocks // DONE
     "no-lonely-if": 1, // disallow `if` statements as the only statement in `else` blocks // DONE
     "no-loop-func": 1, // disallow function declarations that contain unsafe references inside loop statements // DONE
-    "no-magic-numbers": 0, // disallow magic numbers // Comment, this rule seems to be hard to satisfy. // DONE
+    "no-magic-numbers": 0, // disallow magic numbers // Comment, this rule seems to be hard to satisfy. // DONE - OFF
     "no-mixed-operators": 1, // disallow mixed binary operators // DONE
     "no-multi-assign": 1, // disallow use of chained assignment expressions // DONE
     "no-multi-str": 1, // disallow multiline strings // DONE
@@ -145,13 +145,13 @@ module.exports = {
     "no-return-await": 1, // disallow unnecessary `return await` // DONE
     "no-script-url": 1, // disallow `javascript:` urls // DONE
     "no-sequences": 1, // disallow comma operators // DONE
-    "no-shadow": 0, // disallow variable declarations from shadowing variables declared in the outer scope // DONE
+    "no-shadow": 0, // disallow variable declarations from shadowing variables declared in the outer scope // DONE - OFF
     "no-shadow-restricted-names": 1, // disallow identifiers from shadowing restricted names // DONE
     "no-ternary": 0, // disallow ternary operators // DONE - OFF
     "no-throw-literal": 1, // disallow throwing literals as exceptions // DONE
     "no-undef-init": 1, // disallow initializing variables to `undefined` // DONE
-    "no-undefined": 0, // disallow the use of `undefined` as an identifier // DONE
-    "no-underscore-dangle": 0, // disallow dangling underscores in identifiers // DONE
+    "no-undefined": 0, // disallow the use of `undefined` as an identifier // DONE - OFF
+    "no-underscore-dangle": 0, // disallow dangling underscores in identifiers // DONE - OFF
     "no-unneeded-ternary": 0, // disallow ternary operators when simpler alternatives exist // DONE - OFF
     "no-unused-expressions": 0, // disallow unused expressions // DONE - OFF
     "no-unused-labels": 1, // disallow unused labels // DONE
@@ -159,7 +159,7 @@ module.exports = {
     "no-useless-catch": 1, // disallow unnecessary `catch` clauses // DONE
     "no-useless-computed-key": 1, // disallow unnecessary computed property keys in objects and classes // DONE
     "no-useless-concat": 1, // disallow unnecessary concatenation of literals or template literals // DONE
-    "no-useless-constructor": 0, // disallow unnecessary constructors // DONE
+    "no-useless-constructor": 0, // disallow unnecessary constructors // DONE - OFF
     "no-useless-escape": 1, // disallow unnecessary escape characters // DONE
     "no-useless-rename": 1, // disallow renaming import, export, and destructured assignments to the same name // DONE
     "no-useless-return": 1, // disallow redundant return statements // DONE
@@ -167,8 +167,8 @@ module.exports = {
     "no-void": [1, { "allowAsStatement": true }], // disallow `void` operators // DONE - CUSTOMISED
     "no-warning-comments": 1, // disallow specified warning terms in comments // DONE
     "no-with": 1, // disallow `with` statements // DONE
-    "object-shorthand": 0, // require or disallow method and property shorthand syntax for object literals // DONE
-    "one-var": 0, // enforce variables to be declared either together or separately in functions // DONE
+    "object-shorthand": 0, // require or disallow method and property shorthand syntax for object literals // DONE - OFF
+    "one-var": 0, // enforce variables to be declared either together or separately in functions // DONE - OFF
     "one-var-declaration-per-line": 1, // require or disallow newlines around variable declarations // DONE
     "operator-assignment": 1, // require or disallow assignment operator shorthand where possible // DONE
     "prefer-arrow-callback": 1, // require using arrow functions for callbacks // DONE
@@ -183,13 +183,12 @@ module.exports = {
     "prefer-rest-params": 1, // require rest parameters instead of `arguments` // DONE
     "prefer-spread": 1, // require spread operators instead of `.apply()` // DONE
     "prefer-template": 1, // require template literals instead of string concatenation // DONE
-    "quote-props": 0, // require quotes around object literal property names // DONE
     "radix": 1, // enforce the consistent use of the radix argument when using `parseInt()` // DONE
     "require-await": 1, // disallow async functions which have no `await` expression // DONE
     "require-unicode-regexp": 1, // enforce the use of `u` flag on RegExp // DONE
     "require-yield": 1, // require generator functions to contain `yield` // DONE
     "sort-imports": 1, // enforce sorted import declarations within modules // DONE
-    "sort-keys": 0, // require object keys to be sorted // DONE
+    "sort-keys": 0, // require object keys to be sorted // DONE - OFF
     "sort-vars": 1, // require variables within the same declaration block to be sorted // DONE
     "spaced-comment": 1, // enforce consistent spacing after the `//` or `/*` in a comment // DONE
     "strict": 0, // require or disallow strict mode directives // DONE - OFF
@@ -197,7 +196,6 @@ module.exports = {
     "vars-on-top": 1, // require `var` declarations be placed at the top of their containing scope // DONE
     "yoda": 1, // require or disallow "Yoda" conditions // DONE
     "array-bracket-newline": 1, // enforce linebreaks after opening and before closing array brackets // DONE
-    "array-bracket-spacing": 1, // enforce consistent spacing inside array brackets // DONE
     "array-element-newline": 0, // enforce line breaks after each array element // DONE - OFF
     "arrow-parens": 1, // require parentheses around arrow function arguments // DONE
     "arrow-spacing": 1, // enforce consistent spacing before and after the arrow in arrow functions // DONE
@@ -207,21 +205,20 @@ module.exports = {
     "comma-spacing": 1, // enforce consistent spacing before and after commas // DONE
     "comma-style": 1, // enforce consistent comma style // DONE
     "computed-property-spacing": 1, // enforce consistent spacing inside computed property brackets // DONE
-    "dot-location": 0, // enforce consistent newlines before and after dots // DONE
+    "dot-location": 0, // enforce consistent newlines before and after dots // DONE - OFF
     "eol-last": 1, // require or disallow newline at the end of files // DONE
     "func-call-spacing": 1, // require or disallow spacing between function identifiers and their invocations // DONE
     "function-call-argument-newline": [1, "consistent"], // enforce line breaks between arguments of a function call // DONE - CUSTOMISED
-    "function-paren-newline": [1, "multiline-arguments"], // enforce consistent line breaks inside function parentheses // DONE
+    "function-paren-newline": [1, "multiline-arguments"], // enforce consistent line breaks inside function parentheses // DONE - CUSTOMISED
     "generator-star-spacing": 1, // enforce consistent spacing around `*` operators in generator functions // DONE
     "implicit-arrow-linebreak": 1, // enforce the location of arrow function bodies // DONE
     "indent": [1, 2], // enforce consistent indentation. second value is number of spaces // DONE
-    "jsx-quotes": [1, "prefer-single"], // enforce the consistent use of either double or single quotes in JSX attributes // DONE
-    "key-spacing": [1, { "beforeColon": false }], // enforce consistent spacing between keys and values in object literal properties // DONE
-    "keyword-spacing": "always", // enforce consistent spacing before and after keywords // DONE
+    "jsx-quotes": [1, "prefer-single"], // enforce the consistent use of either double or single quotes in JSX attributes // DONE - CUSTOMISED
+    "key-spacing": [1, { "beforeColon": false }], // enforce consistent spacing between keys and values in object literal properties // DONE - CUSTOMISED
     "line-comment-position": 1, // enforce position of line comments // DONE
     "linebreak-style": 0, // enforce consistent linebreak style // OFF
     "lines-around-comment": 1, // require empty lines around comments // DONE
-    "lines-between-class-members": 0, // require or disallow an empty line between class members // DONE
+    "lines-between-class-members": 0, // require or disallow an empty line between class members // DONE - OFF
     "max-len": [1, { "code": 140, "ignoreUrls": true, "ignorePattern": "^import .*" }], // enforce a maximum line length // DONE - CUSTOMISED
     "max-statements-per-line": 1, // enforce a maximum number of statements allowed per line // DONE
     "multiline-ternary": 0, // enforce newlines between operands of ternary expressions // DONE - OFF
@@ -236,10 +233,10 @@ module.exports = {
     "no-whitespace-before-property": 1, // disallow whitespace before properties // DONE
     "nonblock-statement-body-position": 1, // enforce the location of single-line statements // DONE
     "object-curly-newline": 1, // enforce consistent line breaks after opening and before closing braces // DONE
-    "object-curly-spacing": [1, "always"], // enforce consistent spacing inside braces // DONE
+    "object-curly-spacing": [0, "always"], // enforce consistent spacing inside braces // DONE - OFF
     "object-property-newline": 0, // enforce placing object properties on separate lines // DONE - OFF
     "operator-linebreak": 1, // enforce consistent linebreak style for operators // DONE
-    "padded-blocks": 0, // require or disallow padding within blocks // DONE
+    "padded-blocks": 0, // require or disallow padding within blocks // DONE - OFF
     "padding-line-between-statements": 1, // require or disallow padding lines between statements // DONE
     "quotes": [1, "single"], // enforce the consistent use of either backticks, double, or single quotes // DONE
     "rest-spread-spacing": 1, // enforce spacing between rest and spread operators and their expressions // DONE
@@ -247,7 +244,7 @@ module.exports = {
     "semi-spacing": 1, // enforce consistent spacing before and after semicolons // DONE
     "semi-style": 1, // enforce location of semicolons // DONE
     "space-before-blocks": 1, // enforce consistent spacing before blocks // DONE
-    "space-before-function-paren": 0, // enforce consistent spacing before `function` definition opening parenthesis // DONE
+    "space-before-function-paren": 0, // enforce consistent spacing before `function` definition opening parenthesis // DONE - OFF
     "space-in-parens": 1, // enforce consistent spacing inside parentheses // DONE
     "space-infix-ops": 1, // require spacing around infix operators // DONE
     "space-unary-ops": 1, // enforce consistent spacing before or after unary operators // DONE
@@ -272,7 +269,7 @@ module.exports = {
     "no-irregular-whitespace": 1, // disallow irregular whitespace outside of strings and comments // DONE
     "no-negated-in-lhs": 1, // disallow negation of the left operand of an in expression // DONE
     "no-obj-calls": 1, // disallow the use of object properties of the global object (Math and JSON) as functions // DONE
-    "quote-props": [1, "as-needed"], // require quotes around object literal property names // DONE
+    "quote-props": [1, "as-needed"], // require quotes around object literal property names // DONE - CUSTOMISED
     "no-sparse-arrays": 1, // disallow sparse arrays // DONE
     "no-unreachable": 1, // disallow unreachable statements after a return, throw, continue, or break statement // DONE
     "use-isnan": 1, // disallow comparisons with the value NaN // DONE
@@ -282,9 +279,8 @@ module.exports = {
     "no-unused-vars": 1, // disallow declaration of variables that are not used in the code // DONE
     "newline-after-var": 0, // allow/disallow an empty newline after var statement // DONE - OFF
     "no-spaced-func": 1, // disallow space between function identifier and application // DONE
-    "keyword-spacing": [1, { "before": true }], // enforce consistent spacing before and after keywords // DONE
-    "object-curly-spacing": [1, "always"], // enforce consistent spacing inside braces // DONE
-    "array-bracket-spacing": [1, "always"], // enforces consistent spacing inside array brackets // DONE
+    "keyword-spacing": [1, { "before": true }], // enforce consistent spacing before and after keywords // DONE - CUSTOMISED
+    "array-bracket-spacing": [0, "always"], // enforces consistent spacing inside array brackets // DONE - CUSTOMISED
 
     // React specific
     "react/display-name": 0, // prevent missing displayName in a React component definition // DONE - OFF
