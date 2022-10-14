@@ -71,7 +71,7 @@ module.exports = {
     "curly": 1, // enforce consistent brace style for all control statements // DONE
     "default-case": 1, // require `default` cases in `switch` statements // DONE
     "default-case-last": 1, // enforce default clauses in switch statements to be last // DONE
-    "default-param-last": 1, // enforce default parameters to be last // DONE
+    "default-param-last": 0, // enforce default parameters to be last // DONE - OFF
     "dot-notation": 1, // enforce dot notation whenever possible // DONE
     "eqeqeq": 1, // require the use of `===` and `!==` // DONE
     "func-name-matching": 1, // require function names to match the name of the variable or property to which they are assigned // DONE
