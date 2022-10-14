@@ -6,6 +6,13 @@ module.exports = {
     node: true,
     es6: true
   },
+  settings: {
+    "react": {
+      createClass: "createReactClass",
+      pragma: "React",
+      version: "detect"
+    }
+  },
   parser: "@typescript-eslint/parser",
   plugins: ["@typescript-eslint", "react"],
   parserOptions: {
