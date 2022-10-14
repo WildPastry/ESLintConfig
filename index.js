@@ -7,7 +7,7 @@ module.exports = {
     es6: true
   },
   settings: {
-    "react": {
+    react: {
       createClass: "createReactClass",
       pragma: "React",
       version: "detect"
@@ -288,7 +288,7 @@ module.exports = {
     "no-spaced-func": 1, // disallow space between function identifier and application // DONE
     "keyword-spacing": [1, { "before": true }], // enforce consistent spacing before and after keywords // DONE - CUSTOMISED
     "array-bracket-spacing": [0, "always"], // enforces consistent spacing inside array brackets // DONE - CUSTOMISED
-    "@typescript-eslint/no-unused-vars": [1, { "argsIgnorePattern": "^_" }], // DONE - CUSTOMISED
+    "@typescript-eslint/no-unused-vars": ["error", { "argsIgnorePattern": "^_" }], // DONE - CUSTOMISED
     
     // React specific
     "react/display-name": 0, // prevent missing displayName in a React component definition // DONE - OFF
