@@ -1,6 +1,6 @@
 module.exports = {
   root: true,
-  ignorePatterns: ["cypress/*"],
+  ignorePatterns: ["cypress/*", "*.html"],
   env: {
     browser: true,
     node: true,
