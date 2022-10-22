@@ -25,24 +25,22 @@ npm i @typescript-eslint/eslint-plugin@latest eslint-plugin-react@latest eslint-
 npm i @wildpastry/eslint-config@latest
 ```
 
-### Create .eslintrc
+### Create new .eslintrc file
 ```
-create new .eslintrc file
-```
-
-### Add config to .eslintrc
-```
-add { "extends": "@wildpastry/eslint-config" } into .eslintrc and save
+touch .eslintrc
 ```
 
-### Add these optional scripts to package.json
+### Add config to .eslintrc and save
+```
+{ "extends": "@wildpastry/eslint-config" }
+```
+
+### Add these optional scripts to package.json inside "scripts": { ... }
 These scripts will check/fix linting and formatting. Not everything can be automatically fixed.
 ```
-"scripts": {
   "lint": "eslint \"**/*.{js,jsx,ts,tsx}\"",
-  "lint:fix": "eslint --fix \"**/*.{js,jsx,ts,tsx}\""
+  "lint:fix": "eslint --fix \"**/*.{js,jsx,ts,tsx}\"",
   "format": "npx prettier --check \"**/*.{js,jsx,ts,tsx}\"",
   "format:fix": "npx prettier --write \"**/*.{js,jsx,ts,tsx}\"",
   "clean": "npx prettier --write \"**/*.{js,jsx,ts,tsx}\" && npm run lint:fix"
-}
 ```
