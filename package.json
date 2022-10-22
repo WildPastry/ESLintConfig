@@ -1,6 +1,6 @@
 {
   "name": "@wildpastry/eslint-config",
-  "version": "1.6.0",
+  "version": "1.6.2",
   "description": "ESLint configuration file",
   "main": "index.js",
   "scripts": {
@@ -12,7 +12,8 @@
   },
   "keywords": [
     "eslint",
-    "eslint-config"
+    "eslint-config",
+    "prettier"
   ],
   "author": "WildPastry",
   "license": "UNLICENSED",
