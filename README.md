@@ -25,9 +25,9 @@ npm i @typescript-eslint/eslint-plugin@latest eslint-plugin-react@latest eslint-
 npm i @wildpastry/eslint-config@latest
 ```
 
-### Create new .eslintrc file
+### Create new .eslintrc file in the project source
 ```
-touch .eslintrc
+.eslintrc
 ```
 
 ### Add config to .eslintrc and save
