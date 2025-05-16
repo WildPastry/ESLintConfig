@@ -1,50 +1,42 @@
-module.exports = {
-  root: true,
-  ignorePatterns: "*.html",
-  env: {
-    browser: true,
-    node: true,
-    es6: true
-  },
-  settings: {
-    react: {
-      createClass: "createReactClass",
-      pragma: "React",
-      version: "detect"
-    }
-  },
-  parser: "@typescript-eslint/parser",
-  plugins: ["@typescript-eslint", "react", "prettier"],
-  parserOptions: {
-    ecmaFeatures: {
-      impliedStrict: true,
-      arrowFunctions: true,
-      binaryLiterals: true,
-      blockBindings: true,
-      classes: true,
-      defaultParams: true,
-      destructuring: true,
-      forOf: true,
-      generators: true,
-      modules: true,
-      objectLiteralComputedProperties: true,
-      objectLiteralDuplicateProperties: true,
-      objectLiteralShorthandMethods: true,
-      objectLiteralShorthandProperties: true,
-      octalLiterals: true,
-      regexUFlag: true,
-      regexYFlag: true,
-      spread: true,
-      superInFunctions: true,
-      templateStrings: true,
-      unicodeCodePointEscapes: true,
-      globalReturn: true,
-      jsx: true
+// eslint-config/index.js
+import pluginReact from 'eslint-plugin-react';
+import pluginPrettier from 'eslint-plugin-prettier';
+import pluginTS from '@typescript-eslint/eslint-plugin';
+import parserTS from '@typescript-eslint/parser';
+import globals from 'globals';
+
+export default [
+  {
+    files: ['**/*.{ts,tsx,js,jsx}'],
+    languageOptions: {
+      parser: parserTS,
+      ecmaVersion: 2020,
+      sourceType: 'module',
+      globals: {
+        ...globals.browser,
+        ...globals.node,
+      },
+      parserOptions: {
+        ecmaFeatures: {
+          jsx: true,
+        },
+        sourceType: 'module',
+        requireConfigFile: false,
+      },
     },
-    requireConfigFile: false,
-    sourceType: "module"
-  },
-  rules: {
+    settings: {
+      react: {
+        createClass: 'createReactClass',
+        pragma: 'React',
+        version: 'detect',
+      },
+    },
+    plugins: {
+      '@typescript-eslint': pluginTS,
+      react: pluginReact,
+      prettier: pluginPrettier,
+    },
+    rules: {
   // Code
   "no-inferrable-types": 0, // disallow explicit type declarations for variables or parameters initialized to a number, string, or boolean // DONE - OFF
   "no-unsafe-assignment": 0, // disallow assigning a value with type any to variables and properties // DONE - OFF
@@ -358,5 +350,6 @@ module.exports = {
   
   // Prettier specific
   "prettier/prettier": 1
-  },
-};
+  }
+  }
+];

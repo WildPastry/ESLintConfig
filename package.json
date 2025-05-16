@@ -19,5 +19,6 @@
   "license": "UNLICENSED",
   "peerDependencies": {
     "eslint": ">= 3"
-  }
+  },
+  "type": "module"
 }
