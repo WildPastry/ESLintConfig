@@ -30,9 +30,22 @@ npm i @wildpastry/eslint-config@latest
 .eslintrc
 ```
 
-### Add config to .eslintrc and save
+### Add config to eslint.config.js and save
 ```
-{ "extends": "@wildpastry/eslint-config" }
+import wildpastryConfig from '@wildpastry/eslint-config';
+
+export default defineConfig([
+  {
+    files: ['**/*.{js,mjs,cjs,ts,jsx,tsx}'],
+    plugins: { js },
+    extends: ['js/recommended']
+  },
+  {
+    files: ['**/*.{js,mjs,cjs,ts,jsx,tsx}'],
+    languageOptions: { globals: globals.browser }
+  },
+  ...wildpastryConfig
+]);
 ```
 
 ### Add these optional scripts to package.json inside "scripts": { ... }
