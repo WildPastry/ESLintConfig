@@ -1,4 +1,3 @@
-// eslint-config/index.js
 import pluginReact from 'eslint-plugin-react';
 import pluginPrettier from 'eslint-plugin-prettier';
 import pluginTS from '@typescript-eslint/eslint-plugin';
@@ -292,7 +291,6 @@ export default [
   "no-sparse-arrays": 1, // disallow sparse arrays // DONE
   "no-unreachable": 1, // disallow unreachable statements after a return, throw, continue, or break statement // DONE
   "use-isnan": 1, // disallow comparisons with the value NaN // DONE
-  "valid-jsdoc": 1, // ensure JSDoc comments are valid // DONE
   "valid-typeof": 1, // ensure that the results of typeof are compared against a valid string // DONE
   "no-catch-shadow": 1, // disallow the catch clause parameter name being the same as a variable in the outer scope // DONE
   "no-unused-vars": 1, // disallow declaration of variables that are not used in the code // DONE
