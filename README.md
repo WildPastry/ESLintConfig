@@ -6,6 +6,7 @@ No errors, only warnings.
 ## Prerequisites
 - NodeJS and NPM installed
 - Project set up with NodeJS and a package.json
+- Official ESLint and Prettier extensions installed
 - Navigate to the root directory of your project
 
 ## Installation and usage
@@ -23,11 +24,6 @@ npm i @typescript-eslint/eslint-plugin@latest eslint-plugin-react@latest eslint-
 ### Install @wildpastry custom eslint config
 ```
 npm i @wildpastry/eslint-config@latest
-```
-
-### Create new .eslintrc file in the project source
-```
-.eslintrc
 ```
 
 ### Add config to eslint.config.js and save
