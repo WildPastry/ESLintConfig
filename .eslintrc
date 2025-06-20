@@ -291,7 +291,7 @@
     // Other
     "line-comment-position": 1, // enforce position of line comments // DONE
     "lines-between-class-members": 0, // require or disallow an empty line between class members // DONE - OFF
-    "max-len": [1, { "code": 80, "ignoreUrls": true, "ignoreComments": true, "ignorePattern": "^import .*" }], // enforce a maximum line length // DONE - CUSTOMISED
+    "max-len": 0, // enforce a maximum line length // DONE - OFF
     "max-statements-per-line": 1, // enforce a maximum number of statements allowed per line // DONE
     "padding-line-between-statements": 1, // require or disallow padding lines between statements // DONE
     "no-cond-assign": 1, // disallow assignment in conditional expressions // DONE
