@@ -65,31 +65,10 @@ Create an `eslint.config.js` file in your project root:
 import { defineConfig, globalIgnores } from 'eslint/config';
 import wildpastryConfig from '@wildpastry/eslint-config';
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  ...wildpastryConfig,
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // All other recommended here
-    ],
-    languageOptions: {
-      ecmaVersion: 2020,
-      globals: globals.browser
-    }
-  }
-]);
+export default defineConfig([globalIgnores(['dist']), ...wildpastryConfig]);
 ```
 
-### 6. Add TypeScript declaration (if needed)
-
-If using TypeScript, create a `types/wildpastry-eslint-config.d.ts` file:
-
-```typescript
-declare module '@wildpastry/eslint-config';
-```
-
-### 7. Add optional scripts to package.json
+### 6. Add optional scripts to package.json
 
 Add these scripts inside `"scripts": { ... }` in your package.json:
 
