@@ -68,6 +68,27 @@ import wildpastryConfig from '@wildpastry/eslint-config';
 export default defineConfig([globalIgnores(['dist']), ...wildpastryConfig]);
 ```
 
+**For TypeScript projects with type-aware rules:**
+
+If you want to use TypeScript type-aware rules, add parser configuration:
+
+```javascript
+import { defineConfig, globalIgnores } from 'eslint/config';
+import wildpastryConfig from '@wildpastry/eslint-config';
+
+export default defineConfig([
+  globalIgnores(['dist']),
+  ...wildpastryConfig,
+  {
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json']
+      }
+    }
+  }
+]);
+```
+
 ### 6. Add optional scripts to package.json
 
 Add these scripts inside `"scripts": { ... }` in your package.json:
