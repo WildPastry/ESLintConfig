@@ -16,19 +16,19 @@ No errors, only warnings.
 ### 1. Install ESLint and Prettier core packages
 
 ```bash
-npm i eslint prettier
+npm i eslint prettier -D
 ```
 
 ### 2. Install ESLint plugins
 
 ```bash
-npm i @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-plugin-react eslint-plugin-prettier
+npm i @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-plugin-react eslint-plugin-prettier -D
 ```
 
 ### 3. Install @wildpastry custom ESLint config
 
 ```bash
-npm i @wildpastry/eslint-config
+npm i @wildpastry/eslint-config -D
 ```
 
 ### 4. Create .prettierrc file
