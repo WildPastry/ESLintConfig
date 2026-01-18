@@ -1,6 +1,6 @@
-# ESLintConfig
+# ESLintConfig React
 
-Shareable ESLint configuration settings linked with Prettier. ESLint formatting rules are disabled, then re-enabled through the eslint-prettier plugin. This way the formatting rules still get applied and Prettier formatting won't conflict with ESLint linting.
+Shareable ESLint React configuration settings linked with Prettier. ESLint formatting rules are disabled, then re-enabled through the eslint-prettier plugin. This way the formatting rules still get applied and Prettier formatting won't conflict with ESLint linting.
 
 No errors, only warnings.
 
@@ -16,19 +16,19 @@ No errors, only warnings.
 ### 1. Install ESLint and Prettier core packages
 
 ```bash
-npm i eslint@latest prettier@latest
+npm i eslint prettier
 ```
 
 ### 2. Install ESLint plugins
 
 ```bash
-npm i @typescript-eslint/eslint-plugin@latest @typescript-eslint/parser@latest eslint-plugin-react@latest eslint-plugin-prettier@latest
+npm i @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-plugin-react eslint-plugin-prettier
 ```
 
 ### 3. Install @wildpastry custom ESLint config
 
 ```bash
-npm i @wildpastry/eslint-config@latest
+npm i @wildpastry/eslint-config
 ```
 
 ### 4. Create .prettierrc file
@@ -108,26 +108,31 @@ Add these scripts inside `"scripts": { ... }` in your package.json:
 ## Usage Commands
 
 ### Check linting issues:
+
 ```bash
 npm run lint
 ```
 
-### Fix linting issues automatically:
+### Fix linting issues automatically (may not fix all):
+
 ```bash
 npm run lint:fix
 ```
 
 ### Check formatting issues:
+
 ```bash
 npm run format
 ```
 
-### Fix formatting issues automatically:
+### Fix formatting issues automatically (may not fix all):
+
 ```bash
 npm run format:fix
 ```
 
-### Clean and fix both formatting and linting:
+### Clean and fix both formatting and linting (may not fix all):
+
 ```bash
 npm run clean
 ```
