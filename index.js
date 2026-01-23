@@ -37,158 +37,159 @@ export default [
     },
     rules: {
       // Modern Code Quality Rules
-      'array-callback-return': 1, // enforce `return` statements in callbacks of array methods - ENABLED for better code quality
-      'no-await-in-loop': 1, // disallow `await` inside of loops - ENABLED to prevent performance issues
-      'no-constructor-return': 1, // disallow returning value from constructor - ENABLED for correctness
-      'no-duplicate-imports': 1, // disallow duplicate module imports
-      'no-promise-executor-return': 1, // disallow returning values from Promise executor functions - ENABLED for correctness
-      'no-self-compare': 1, // disallow comparisons where both sides are exactly the same
-      'no-template-curly-in-string': 1, // disallow template literal placeholder syntax in regular strings - ENABLED to catch common mistakes
-      'no-unmodified-loop-condition': 1, // disallow unmodified loop conditions
-      'no-unreachable-loop': 1, // disallow loops with a body that allows only one iteration
-      'no-use-before-define': 1, // disallow the use of variables before they are defined - ENABLED for stricter code
-      'require-atomic-updates': 1, // disallow assignments that can lead to race conditions due to usage of `await` or `yield`
+      'array-callback-return': 1, // enforce `return` statements in callbacks of array methods - ENABLED
+      'no-await-in-loop': 1, // disallow `await` inside of loops - ENABLED
+      'no-constructor-return': 1, // disallow returning value from constructor - ENABLED
+      'no-duplicate-imports': 1, // disallow duplicate module imports - ENABLED
+      'no-promise-executor-return': 1, // disallow returning values from Promise executor functions - ENABLED
+      'no-self-compare': 1, // disallow comparisons where both sides are exactly the same - ENABLED
+      'no-template-curly-in-string': 1, // disallow template literal placeholder syntax in regular strings - ENABLED
+      'no-unmodified-loop-condition': 1, // disallow unmodified loop conditions - ENABLED
+      'no-unreachable-loop': 1, // disallow loops with a body that allows only one iteration - ENABLED
+      'no-use-before-define': 1, // disallow the use of variables before they are defined - ENABLED
+      'require-atomic-updates': 1, // disallow assignments that can lead to race conditions due to usage of `await` or `yield` - ENABLED
 
       // Additional Strict Rules
       'complexity': [1, 10], // enforce a maximum cyclomatic complexity - ENABLED with limit of 10
-      'no-magic-numbers': [1, { ignore: [0, 1, -1], ignoreArrayIndexes: true }], // disallow magic numbers with exceptions
+      'no-magic-numbers': 0, // disallow magic numbers - OFF
       'id-length': [
         1,
         { min: 2, exceptions: ['i', 'j', 'k', 'x', 'y', 'z', '_'] }
-      ], // enforce minimum identifier lengths
+      ], // enforce minimum identifier lengths - ENABLED with exceptions
       'accessor-pairs': 0, // enforce getter and setter pairs in objects and classes - OFF
       'arrow-body-style': 0, // require braces around arrow function bodies - OFF
-      'block-scoped-var': 1, // enforce the use of variables within the scope they are defined
-      'camelcase': 1, // enforce camelcase naming convention
-      'capitalized-comments': 0, // enforce or disallow capitalization of the first letter of a comment - OFF for flexibility
+      'block-scoped-var': 1, // enforce the use of variables within the scope they are defined - ENABLED
+      'camelcase': 1, // enforce camelcase naming convention - ENABLED
+      'capitalized-comments': 1, // enforce or disallow capitalization of the first letter of a comment - ENABLED
       'class-methods-use-this': 0, // enforce that class methods utilize `this` - OFF
-      'consistent-return': 1, // require `return` statements to either always or never specify values
-      'consistent-this': 1, // enforce consistent naming when capturing the current execution context
-      'default-case': 1, // require `default` cases in `switch` statements
-      'default-case-last': 1, // enforce default clauses in switch statements to be last
-      'default-param-last': 1, // enforce default parameters to be last - ENABLED for modern practices
-      'dot-notation': 1, // enforce dot notation whenever possible
-      'eqeqeq': 1, // require the use of `===` and `!==`
-      'func-name-matching': 1, // require function names to match the name of the variable or property to which they are assigned
-      'func-names': 0, // require or disallow named `function` expressions - OFF for flexibility
+      'consistent-return': 1, // require `return` statements to either always or never specify values - ENABLED
+      'consistent-this': 1, // enforce consistent naming when capturing the current execution context - ENABLED
+      'default-case': 1, // require `default` cases in `switch` statements - ENABLED
+      'default-case-last': 1, // enforce default clauses in switch statements to be last - ENABLED
+      'default-param-last': 1, // enforce default parameters to be last - ENABLED
+      'dot-notation': 1, // enforce dot notation whenever possible - ENABLED
+      'eqeqeq': 1, // require the use of `===` and `!==` - ENABLED
+      'func-name-matching': 1, // require function names to match the name of the variable or property to which they are assigned - ENABLED
+      'func-names': 0, // require or disallow named `function` expressions - OFF
       'func-style': 0, // enforce the consistent use of either `function` declarations or expressions - OFF
-      'grouped-accessor-pairs': 1, // require grouped accessor pairs in object literals and classes
-      'guard-for-in': 1, // require `for-in` loops to include an `if` statement
+      'grouped-accessor-pairs': 1, // require grouped accessor pairs in object literals and classes - ENABLED
+      'guard-for-in': 1, // require `for-in` loops to include an `if` statement - ENABLED
       'id-denylist': 0, // disallow specified identifiers - OFF
       'id-match': 0, // require identifiers to match a specified regular expression - OFF
       'init-declarations': 0, // require or disallow initialization in variable declarations - OFF
-      'max-classes-per-file': 1, // enforce a maximum number of classes per file
-      'max-depth': [1, 4], // enforce a maximum depth that blocks can be nested - UPDATED to 4 for modern practices
-      'max-lines': [1, { max: 1000, skipBlankLines: true }], // enforce a maximum number of lines per file - UPDATED to 1000
-      'max-lines-per-function': [1, { max: 300 }], // enforce a maximum number of lines of code in a function - UPDATED to 300
-      'max-nested-callbacks': [1, 4], // enforce a maximum depth that callbacks can be nested - UPDATED to 4
-      'max-params': [1, { max: 5 }], // enforce a maximum number of parameters in function definitions - UPDATED to 5
-      'max-statements': [1, { max: 30 }], // enforce a maximum number of statements allowed in function blocks - UPDATED to 30
-      'multiline-comment-style': 0, // enforce a particular style for multiline comments - OFF
+      'max-classes-per-file': 1, // enforce a maximum number of classes per file - ENABLED
+      'max-depth': [1, 4], // enforce a maximum depth that blocks can be nested - ENABLED with limit of 4
+      'max-lines': [1, { max: 1000, skipBlankLines: true }], // enforce a maximum number of lines per file - ENABLED with limit of 1000
+      'max-lines-per-function': [1, { max: 300 }], // enforce a maximum number of lines of code in a function - ENABLED with limit of 300
+      'max-nested-callbacks': [1, 4], // enforce a maximum depth that callbacks can be nested - ENABLED with limit of 4
+      'max-params': [1, { max: 5 }], // enforce a maximum number of parameters in function definitions - ENABLED with limit of 5
+      'max-statements': [1, { max: 30 }], // enforce a maximum number of statements allowed in function blocks - ENABLED with limit of 30
+      'multiline-comment-style': 1, // enforce a particular style for multiline comments - ENABLED
       'new-cap': 0, // require constructor names to begin with a capital letter - OFF
-      'no-alert': 1, // disallow the use of `alert`, `confirm`, and `prompt`
-      'no-array-constructor': 1, // disallow `Array` constructors
-      'no-bitwise': 1, // disallow bitwise operators
-      'no-caller': 1, // disallow the use of `arguments.caller` or `arguments.callee`
-      'no-case-declarations': 1, // disallow lexical declarations in case clauses
-      'no-console': 1, // disallow the use of `console`
-      'no-continue': 1, // disallow `continue` statements
-      'no-delete-var': 1, // disallow deleting variables
-      'no-div-regex': 1, // disallow division operators explicitly at the beginning of regular expressions
-      'no-else-return': 1, // disallow `else` blocks after `return` statements in `if` statements
-      'no-empty': 1, // disallow empty block statements
-      'no-empty-function': [1, { allow: ['constructors'] }], // disallow empty functions
-      'no-eq-null': 1, // disallow `null` comparisons without type-checking operators
-      'no-eval': 1, // disallow the use of `eval()`
-      'no-extend-native': 1, // disallow extending native types
-      'no-extra-bind': 1, // disallow unnecessary calls to `.bind()`
-      'no-extra-boolean-cast': 1, // disallow unnecessary boolean casts
-      'no-extra-label': 1, // disallow unnecessary labels
-      'no-global-assign': 1, // disallow assignments to native objects or read-only global variables
-      'no-implicit-coercion': 1, // disallow shorthand type conversions
-      'no-implicit-globals': 1, // disallow declarations in the global scope
-      'no-implied-eval': 1, // disallow the use of `eval()`-like methods
-      'no-inline-comments': 1, // disallow inline comments after code
-      'no-invalid-this': 1, // disallow `this` keywords outside of classes or class-like objects
-      'no-iterator': 1, // disallow the use of the `__iterator__` property
-      'no-label-var': 1, // disallow labels that share a name with a variable
-      'no-labels': 1, // disallow labeled statements
-      'no-lone-blocks': 1, // disallow unnecessary nested blocks
-      'no-lonely-if': 1, // disallow `if` statements as the only statement in `else` blocks
-      'no-loop-func': 1, // disallow function declarations that contain unsafe references inside loop statements
-      'no-multi-assign': 1, // disallow use of chained assignment expressions
-      'no-multi-str': 1, // disallow multiline strings
-      'no-negated-condition': 1, // disallow negated conditions
-      'no-nested-ternary': 1, // disallow nested ternary expressions
-      'no-new': 1, // disallow `new` operators outside of assignments or comparisons
-      'no-new-func': 1, // disallow `new` operators with the `Function` object
-      'no-new-object': 1, // disallow `Object` constructors
-      'no-new-wrappers': 1, // disallow `new` operators with the `String`, `Number`, and `Boolean` objects
-      'no-nonoctal-decimal-escape': 1, // disallow `\8` and `\9` escape sequences in string literals
-      'no-octal': 1, // disallow octal literals
-      'no-octal-escape': 1, // disallow octal escape sequences in string literals
-      'no-param-reassign': 1, // disallow reassigning `function` parameters
-      'no-plusplus': 1, // disallow the unary operators `++` and `--`   "no-proto": 1, // disallow the use of the `__proto__` property
-      'no-redeclare': 1, // disallow variable redeclaration
-      'no-regex-spaces': 1, // disallow multiple spaces in regular expressions
-      'no-restricted-exports': 1, // disallow specified names in exports
-      'no-restricted-globals': 1, // disallow specified global variables
-      'no-restricted-imports': 1, // disallow specified modules when loaded by `import`
-      'no-restricted-properties': 1, // disallow certain properties on certain objects
-      'no-restricted-syntax': 1, // disallow specified syntax
-      'no-return-assign': 1, // disallow assignment operators in `return` statements
-      'no-return-await': 1, // disallow unnecessary `return await`
-      'no-script-url': 1, // disallow `javascript:` urls
-      'no-sequences': 1, // disallow comma operators
-      'no-shadow': 1, // disallow variable declarations from shadowing variables declared in the outer scope
-      'no-shadow-restricted-names': 1, // disallow identifiers from shadowing restricted names
-      'no-ternary': 1, // disallow ternary operators
-      'no-throw-literal': 1, // disallow throwing literals as exceptions
-      'no-undef-init': 1, // disallow initializing variables to `undefined`
-      'no-undefined': 1, // disallow the use of `undefined` as an identifier
-      'no-underscore-dangle': 1, // disallow dangling underscores in identifiers
+      'no-alert': 1, // disallow the use of `alert`, `confirm`, and `prompt` - ENABLED
+      'no-array-constructor': 1, // disallow `Array` constructors - ENABLED
+      'no-bitwise': 1, // disallow bitwise operators - ENABLED
+      'no-caller': 1, // disallow the use of `arguments.caller` or `arguments.callee` - ENABLED
+      'no-case-declarations': 1, // disallow lexical declarations in case clauses - ENABLED
+      'no-console': 1, // disallow the use of `console` - ENABLED
+      'no-continue': 1, // disallow `continue` statements - ENABLED
+      'no-delete-var': 1, // disallow deleting variables - ENABLED
+      'no-div-regex': 1, // disallow division operators explicitly at the beginning of regular expressions - ENABLED
+      'no-else-return': 1, // disallow `else` blocks after `return` statements in `if` statements - ENABLED
+      'no-empty': 1, // disallow empty block statements - ENABLED
+      'no-empty-function': [1, { allow: ['constructors'] }], // disallow empty functions - ENABLED with exceptions
+      'no-eq-null': 1, // disallow `null` comparisons without type-checking operators - ENABLED
+      'no-eval': 1, // disallow the use of `eval()` - ENABLED
+      'no-extend-native': 1, // disallow extending native types - ENABLED
+      'no-extra-bind': 1, // disallow unnecessary calls to `.bind()` - ENABLED
+      'no-extra-boolean-cast': 1, // disallow unnecessary boolean casts - ENABLED
+      'no-extra-label': 1, // disallow unnecessary labels - ENABLED
+      'no-global-assign': 1, // disallow assignments to native objects or read-only global variables - ENABLED
+      'no-implicit-coercion': 1, // disallow shorthand type conversions - ENABLED
+      'no-implicit-globals': 1, // disallow declarations in the global scope - ENABLED
+      'no-implied-eval': 1, // disallow the use of `eval()`-like methods - ENABLED
+      'no-inline-comments': 0, // disallow inline comments after code - OFF
+      'no-invalid-this': 1, // disallow `this` keywords outside of classes or class-like objects - ENABLED
+      'no-iterator': 1, // disallow the use of the `__iterator__` property - ENABLED
+      'no-label-var': 1, // disallow labels that share a name with a variable - ENABLED
+      'no-labels': 1, // disallow labeled statements - ENABLED
+      'no-lone-blocks': 1, // disallow unnecessary nested blocks - ENABLED
+      'no-lonely-if': 1, // disallow `if` statements as the only statement in `else` blocks - ENABLED
+      'no-loop-func': 1, // disallow function declarations that contain unsafe references inside loop statements - ENABLED
+      'no-multi-assign': 1, // disallow use of chained assignment expressions - ENABLED
+      'no-multi-str': 1, // disallow multiline strings - ENABLED
+      'no-negated-condition': 1, // disallow negated conditions - ENABLED
+      'no-nested-ternary': 1, // disallow nested ternary expressions - ENABLED
+      'no-new': 1, // disallow `new` operators outside of assignments or comparisons - ENABLED
+      'no-new-func': 1, // disallow `new` operators with the `Function` object - ENABLED
+      'no-new-object': 1, // disallow `Object` constructors - ENABLED
+      'no-new-wrappers': 1, // disallow `new` operators with the `String`, `Number`, and `Boolean` objects - ENABLED
+      'no-nonoctal-decimal-escape': 1, // disallow `\8` and `\9` escape sequences in string literals - ENABLED
+      'no-octal': 1, // disallow octal literals - ENABLED
+      'no-octal-escape': 1, // disallow octal escape sequences in string literals - ENABLED
+      'no-param-reassign': 1, // disallow reassigning `function` parameters - ENABLED
+      'no-plusplus': 1, // disallow the unary operators `++` and `--` - ENABLED
+      'no-proto': 1, // disallow the use of the `__proto__` property - ENABLED
+      'no-redeclare': 1, // disallow variable redeclaration - ENABLED
+      'no-regex-spaces': 1, // disallow multiple spaces in regular expressions - ENABLED
+      'no-restricted-exports': 1, // disallow specified names in exports - ENABLED
+      'no-restricted-globals': 1, // disallow specified global variables - ENABLED
+      'no-restricted-imports': 1, // disallow specified modules when loaded by `import` - ENABLED
+      'no-restricted-properties': 1, // disallow certain properties on certain objects - ENABLED
+      'no-restricted-syntax': 1, // disallow specified syntax - ENABLED
+      'no-return-assign': 1, // disallow assignment operators in `return` statements - ENABLED
+      'no-return-await': 1, // disallow unnecessary `return await` - ENABLED
+      'no-script-url': 1, // disallow `javascript:` urls - ENABLED
+      'no-sequences': 1, // disallow comma operators - ENABLED
+      'no-shadow': 1, // disallow variable declarations from shadowing variables declared in the outer scope - ENABLED
+      'no-shadow-restricted-names': 0, // disallow identifiers from shadowing restricted names - OFF
+      'no-ternary': 0, // disallow ternary operators - OFF
+      'no-throw-literal': 1, // disallow throwing literals as exceptions - ENABLED
+      'no-undef-init': 1, // disallow initializing variables to `undefined` - ENABLED
+      'no-undefined': 0, // disallow the use of `undefined` as an identifier - OFF
+      'no-underscore-dangle': 1, // disallow dangling underscores in identifiers - ENABLED
       'no-unneeded-ternary': 1, // disallow ternary operators when simpler alternatives exist - ENABLED
-      'no-unused-expressions': 1, // disallow unused expressions
-      'no-unused-labels': 1, // disallow unused labels
-      'no-useless-call': 1, // disallow unnecessary calls to `.call()` and `.apply()`
-      'no-useless-catch': 1, // disallow unnecessary `catch` clauses
-      'no-useless-computed-key': 1, // disallow unnecessary computed property keys in objects and classes
-      'no-useless-concat': 1, // disallow unnecessary concatenation of literals or template literals
+      'no-unused-expressions': 1, // disallow unused expressions - ENABLED
+      'no-unused-labels': 1, // disallow unused labels - ENABLED
+      'no-useless-call': 1, // disallow unnecessary calls to `.call()` and `.apply()` - ENABLED
+      'no-useless-catch': 1, // disallow unnecessary `catch` clauses - ENABLED
+      'no-useless-computed-key': 1, // disallow unnecessary computed property keys in objects and classes - ENABLED
+      'no-useless-concat': 1, // disallow unnecessary concatenation of literals or template literals - ENABLED
       'no-useless-constructor': 1, // disallow unnecessary constructors - ENABLED
-      'no-useless-escape': 1, // disallow unnecessary escape characters
-      'no-useless-rename': 1, // disallow renaming import, export, and destructured assignments to the same name
-      'no-useless-return': 1, // disallow redundant return statements
-      'no-var': 1, // require `let` or `const` instead of `var`
-      'no-void': [1, { allowAsStatement: true }], // disallow `void` operators
-      'no-warning-comments': 1, // disallow specified warning terms in comments
-      'no-with': 1, // disallow `with` statements
+      'no-useless-escape': 1, // disallow unnecessary escape characters - ENABLED
+      'no-useless-rename': 1, // disallow renaming import, export, and destructured assignments to the same name - ENABLED
+      'no-useless-return': 1, // disallow redundant return statements - ENABLED
+      'no-var': 1, // require `let` or `const` instead of `var` - ENABLED
+      'no-void': [1, { allowAsStatement: true }], // disallow `void` operators - ENABLED with exceptions
+      'no-warning-comments': 1, // disallow specified warning terms in comments - ENABLED
+      'no-with': 1, // disallow `with` statements - ENABLED
       'object-shorthand': 1, // require or disallow method and property shorthand syntax for object literals - ENABLED
-      'one-var': 0, // enforce variables to be declared either together or separately in functions // DONE - OFF
-      'operator-assignment': 1, // require or disallow assignment operator shorthand where possible
-      'prefer-arrow-callback': 1, // require using arrow functions for callbacks
-      'prefer-const': 1, // require `const` declarations for variables that are never reassigned after declared
-      'prefer-destructuring': 1, // require destructuring from arrays and/or objects
-      'prefer-exponentiation-operator': 1, // disallow the use of `Math.pow` in favor of the `**` operator
-      'prefer-named-capture-group': 1, // enforce using named capture group in regular expression
-      'prefer-numeric-literals': 1, // disallow `parseInt()` and `Number.parseInt()` in favor of binary, octal, and hexadecimal literals
-      'prefer-object-spread': 1, // disallow using Object.assign with an object literal as the first argument and prefer the use of object spread instead
-      'prefer-promise-reject-errors': 1, // require using Error objects as Promise rejection reasons
-      'prefer-regex-literals': 1, // disallow use of the `RegExp` constructor in favor of regular expression literals
-      'prefer-rest-params': 1, // require rest parameters instead of `arguments`
-      'prefer-spread': 1, // require spread operators instead of `.apply()`
-      'prefer-template': 1, // require template literals instead of string concatenation
-      'radix': 1, // enforce the consistent use of the radix argument when using `parseInt()`
-      'require-await': 1, // disallow async functions which have no `await` expression
-      'require-unicode-regexp': 1, // enforce the use of `u` flag on RegExp
-      'require-yield': 1, // require generator functions to contain `yield`
-      'sort-imports': 1, // enforce sorted import declarations within modules
-      'sort-keys': 1, // require object keys to be sorted
-      'sort-vars': 1, // require variables within the same declaration block to be sorted
-      'spaced-comment': 1, // enforce consistent spacing after the `//` or `/*` in a comment
-      'strict': 1, // require or disallow strict mode directives
-      'symbol-description': 1, // require symbol descriptions
-      'vars-on-top': 1, // require `var` declarations be placed at the top of their containing scope
-      'yoda': 1, // require or disallow "Yoda" conditions
+      'one-var': 0, // enforce variables to be declared either together or separately in functions - OFF
+      'operator-assignment': 1, // require or disallow assignment operator shorthand where possible - ENABLED
+      'prefer-arrow-callback': 1, // require using arrow functions for callbacks - ENABLED
+      'prefer-const': 1, // require `const` declarations for variables that are never reassigned after declared - ENABLED
+      'prefer-destructuring': 1, // require destructuring from arrays and/or objects - ENABLED
+      'prefer-exponentiation-operator': 1, // disallow the use of `Math.pow` in favor of the `**` operator - ENABLED
+      'prefer-named-capture-group': 1, // enforce using named capture group in regular expression - ENABLED
+      'prefer-numeric-literals': 1, // disallow `parseInt()` and `Number.parseInt()` in favor of binary, octal, and hexadecimal literals - ENABLED
+      'prefer-object-spread': 1, // disallow using Object.assign with an object literal as the first argument and prefer the use of object spread instead - ENABLED
+      'prefer-promise-reject-errors': 1, // require using Error objects as Promise rejection reasons - ENABLED
+      'prefer-regex-literals': 1, // disallow use of the `RegExp` constructor in favor of regular expression literals - ENABLED
+      'prefer-rest-params': 1, // require rest parameters instead of `arguments` - ENABLED
+      'prefer-spread': 1, // require spread operators instead of `.apply()` - ENABLED
+      'prefer-template': 1, // require template literals instead of string concatenation - ENABLED
+      'radix': 1, // enforce the consistent use of the radix argument when using `parseInt()` - ENABLED
+      'require-await': 1, // disallow async functions which have no `await` expression - ENABLED
+      'require-unicode-regexp': 1, // enforce the use of `u` flag on RegExp - ENABLED
+      'require-yield': 1, // require generator functions to contain `yield` - ENABLED
+      'sort-imports': 1, // enforce sorted import declarations within modules - ENABLED
+      'sort-keys': 1, // require object keys to be sorted - ENABLED
+      'sort-vars': 1, // require variables within the same declaration block to be sorted - ENABLED
+      'spaced-comment': 1, // enforce consistent spacing after the `//` or `/*` in a comment - ENABLED
+      'strict': 1, // require or disallow strict mode directives - ENABLED
+      'symbol-description': 1, // require symbol descriptions - ENABLED
+      'vars-on-top': 1, // require `var` declarations be placed at the top of their containing scope - ENABLED
+      'yoda': 1, // require or disallow "Yoda" conditions - ENABLED
 
       // Formatting Rules (Disabled - handled by Prettier)
       'curly': 0, // enforce consistent brace style for all control statements - OFF
@@ -291,18 +292,18 @@ export default [
       'array-bracket-spacing': 0, // enforce consistent spacing inside array brackets - OFF
 
       // TypeScript ESLint Rules
-      '@typescript-eslint/no-unused-vars': [1, { argsIgnorePattern: '^_' }], // disallow unused variables with underscore prefix exception
-      '@typescript-eslint/no-explicit-any': 1, // disallow usage of the any type - ENABLED for better type safety
-      '@typescript-eslint/prefer-nullish-coalescing': 1, // prefer nullish coalescing operator - ENABLED for modern practices
-      '@typescript-eslint/prefer-optional-chain': 1, // prefer optional chaining - ENABLED for modern practices
-      '@typescript-eslint/no-non-null-assertion': 1, // disallow non-null assertions - ENABLED for safety
+      '@typescript-eslint/no-unused-vars': [1, { argsIgnorePattern: '^_' }], // disallow unused variables - ENABLED with underscore exception
+      '@typescript-eslint/no-explicit-any': 1, // disallow usage of the any type - ENABLED
+      '@typescript-eslint/prefer-nullish-coalescing': 1, // prefer nullish coalescing operator - ENABLED
+      '@typescript-eslint/prefer-optional-chain': 1, // prefer optional chaining - ENABLED
+      '@typescript-eslint/no-non-null-assertion': 1, // disallow non-null assertions - ENABLED
       '@typescript-eslint/consistent-type-imports': 1, // enforce consistent usage of type imports - ENABLED
-      '@typescript-eslint/no-floating-promises': 1, // require Promise-like statements to be handled appropriately
-      '@typescript-eslint/await-thenable': 1, // disallow awaiting a value that is not a Thenable
-      '@typescript-eslint/no-misused-promises': 1, // avoid using promises in places not designed to handle them
-      '@typescript-eslint/prefer-readonly': 1, // require private members to be marked as readonly if they're never modified
-      '@typescript-eslint/prefer-readonly-parameter-types': 0, // require function parameters to be typed as readonly - OFF as it can be too restrictive
-      '@typescript-eslint/strict-boolean-expressions': 1, // restrict the types allowed in boolean expressions
+      '@typescript-eslint/no-floating-promises': 1, // require Promise-like statements to be handled appropriately - ENABLED
+      '@typescript-eslint/await-thenable': 1, // disallow awaiting a value that is not a Thenable - ENABLED
+      '@typescript-eslint/no-misused-promises': 1, // avoid using promises in places not designed to handle them - ENABLED
+      '@typescript-eslint/prefer-readonly': 1, // require private members to be marked as readonly if they're never modified - ENABLED
+      '@typescript-eslint/prefer-readonly-parameter-types': 0, // require function parameters to be typed as readonly - OFF
+      '@typescript-eslint/strict-boolean-expressions': 1, // restrict the types allowed in boolean expressions - ENABLED
       // TypeScript formatting rules (disabled - handled by Prettier)
       '@typescript-eslint/brace-style': 0, // OFF
       '@typescript-eslint/comma-dangle': 0, // OFF
@@ -323,17 +324,17 @@ export default [
 
       // React Rules
       'react/display-name': 0, // prevent missing displayName in a React component definition - OFF
-      'react/jsx-no-undef': 1, // disallow undeclared variables in JSX
-      'react/jsx-sort-props': 1, // enforce props alphabetical sorting - ON
-      'react/jsx-uses-react': 0, // prevent React to be incorrectly marked as unused - OFF for React 17+
-      'react/jsx-uses-vars': 1, // prevent variables used in JSX to be incorrectly marked as unused
-      'react/no-did-mount-set-state': 0, // prevent usage of setState in componentDidMount - OFF (deprecated)
-      'react/no-did-update-set-state': 0, // prevent usage of setState in componentDidUpdate - OFF (deprecated)
+      'react/jsx-no-undef': 1, // disallow undeclared variables in JSX - ENABLED
+      'react/jsx-sort-props': 1, // enforce props alphabetical sorting - ENABLED
+      'react/jsx-uses-react': 0, // prevent React to be incorrectly marked as unused - OFF
+      'react/jsx-uses-vars': 1, // prevent variables used in JSX to be incorrectly marked as unused - ENABLED
+      'react/no-did-mount-set-state': 0, // prevent usage of setState in componentDidMount - OFF
+      'react/no-did-update-set-state': 0, // prevent usage of setState in componentDidUpdate - OFF
       'react/no-multi-comp': 0, // prevent multiple component definition per file - OFF
-      'react/no-unknown-property': 1, // prevent usage of unknown DOM property
-      'react/prop-types': 0, // prevent missing props validation in a React component definition - OFF for TypeScript projects
-      'react/react-in-jsx-scope': 0, // prevent missing React when using JSX - OFF for React 17+
-      'react/self-closing-comp': 1, // prevent extra closing tags for components without children
+      'react/no-unknown-property': 1, // prevent usage of unknown DOM property - ENABLED
+      'react/prop-types': 0, // prevent missing props validation in a React component definition - OFF
+      'react/react-in-jsx-scope': 0, // prevent missing React when using JSX - OFF
+      'react/self-closing-comp': 1, // prevent extra closing tags for components without children - ENABLED
       'react/hook-use-state': 1, // enforce destructuring and symmetric naming of useState hook value and setter variables - ENABLED
       'react/jsx-no-leaked-render': 1, // prevent problematic leaked values from being rendered - ENABLED
       'react/jsx-no-useless-fragment': 1, // disallow unnecessary fragments - ENABLED
@@ -355,7 +356,7 @@ export default [
       'react/jsx-wrap-multilines': 0, // OFF
 
       // Prettier specific
-      'prettier/prettier': 1
+      'prettier/prettier': 1 // enforce Prettier formatting - ENABLED
     }
   }
 ];
