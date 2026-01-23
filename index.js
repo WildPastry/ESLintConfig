@@ -141,7 +141,7 @@ export default [
       'no-return-await': 1, // disallow unnecessary `return await` - ENABLED
       'no-script-url': 1, // disallow `javascript:` urls - ENABLED
       'no-sequences': 1, // disallow comma operators - ENABLED
-      'no-shadow': 1, // disallow variable declarations from shadowing variables declared in the outer scope - ENABLED
+      'no-shadow': 0, // disallow variable declarations from shadowing variables declared in the outer scope - OFF
       'no-shadow-restricted-names': 0, // disallow identifiers from shadowing restricted names - OFF
       'no-ternary': 0, // disallow ternary operators - OFF
       'no-throw-literal': 1, // disallow throwing literals as exceptions - ENABLED
