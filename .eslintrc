@@ -187,7 +187,7 @@
     "no-warning-comments": 1, // disallow specified warning terms in comments
     "no-with": 1, // disallow `with` statements
     "object-shorthand": 1, // require or disallow method and property shorthand syntax for object literals - ENABLED
-    "one-var": 1, // enforce variables to be declared either together or separately in functions
+    "one-var": 0, // enforce variables to be declared either together or separately in functions // DONE - OFF
     "operator-assignment": 1, // require or disallow assignment operator shorthand where possible
     "prefer-arrow-callback": 1, // require using arrow functions for callbacks
     "prefer-const": 1, // require `const` declarations for variables that are never reassigned after declared
