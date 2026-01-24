@@ -303,7 +303,7 @@ export default [
       '@typescript-eslint/no-misused-promises': 1, // avoid using promises in places not designed to handle them - ENABLED
       '@typescript-eslint/prefer-readonly': 1, // require private members to be marked as readonly if they're never modified - ENABLED
       '@typescript-eslint/prefer-readonly-parameter-types': 0, // require function parameters to be typed as readonly - OFF
-      '@typescript-eslint/strict-boolean-expressions': 1, // restrict the types allowed in boolean expressions - ENABLED
+      '@typescript-eslint/strict-boolean-expressions': 0, // restrict the types allowed in boolean expressions - OFF
       // TypeScript formatting rules (disabled - handled by Prettier)
       '@typescript-eslint/brace-style': 0, // OFF
       '@typescript-eslint/comma-dangle': 0, // OFF
